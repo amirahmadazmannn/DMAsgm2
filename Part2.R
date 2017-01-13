@@ -74,12 +74,3 @@ which(redundant)
 cleaned_rules <- sorted_rules[!redundant]
 inspect(cleaned_rules)
 
-
-
-
-#sort so that transaction_id is low to high
-sorted.extended_bakery <- extended_bakery[order(as.numeric(as.character(extended_bakery$transaction_id))), ]
-sorted.extended_bakery
-
-rules <- apriori(df, parameter=list(support=0.005, confidence=0.5))
-inspect(rules)
